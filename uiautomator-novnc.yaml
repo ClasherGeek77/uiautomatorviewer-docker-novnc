@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  novnc:
+    build:
+      context: .
+      dockerfile: novnc.dockerfile
+    environment:
+      # Adjust to your screen size
+      - DISPLAY_WIDTH=1600
+      - DISPLAY_HEIGHT=900
+      - RUN_XTERM=yes
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uix:/root/uix
+    network_mode: "host"
+
