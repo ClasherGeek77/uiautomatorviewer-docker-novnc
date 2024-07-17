@@ -3,8 +3,7 @@ name: Docker Build and Push
 on:
   push:
     branches: [ master ]
-    paths:
-      - 'novnc.dockerfile'
+    
 jobs:
   build:
     runs-on: ubuntu-latest
