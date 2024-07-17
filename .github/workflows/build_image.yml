@@ -35,15 +35,15 @@ jobs:
       id: date
       run: echo "BUILD_DATE=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
       
-    - name: Build and push node-appium-base image
+    - name: Build and push uiautomator-novnc image
       uses: docker/build-push-action@v5.3.0
       with:
         context: .
         file: ./novnc.dockerfile
         push: true
         tags: |
-          ghcr.io/${{ github.repository }}/uiautomator-novnc:${{ env.BUILD_DATE }}
-          ghcr.io/${{ github.repository }}/uiautomator-novnc:latest
+          ghcr.io/clashergeek77/uiautomator-novnc:${{ env.BUILD_DATE }}
+          ghcr.io/clashergeek77/uiautomator-novnc:latest
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
 
