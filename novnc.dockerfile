@@ -60,7 +60,8 @@ RUN set -ex; \
       x11vnc \
       xterm \
       xvfb \
-      scrcpy
+      scrcpy \
+      tilix
 
 # Setup demo environment variables
 ENV HOME=/root \
