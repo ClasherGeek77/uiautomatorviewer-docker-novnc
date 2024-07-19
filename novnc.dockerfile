@@ -59,7 +59,8 @@ RUN set -ex; \
       supervisor \
       x11vnc \
       xterm \
-      xvfb
+      xvfb \
+      scrcpy
 
 # Setup demo environment variables
 ENV HOME=/root \
